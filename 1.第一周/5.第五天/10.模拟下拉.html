@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟下拉</title>
+    <style>
+        *{margin:0;padding:0;}
+        div{
+            position: relative;
+            margin:0 auto;
+            border:1px solid #cccccc;
+            border-radius: 3px;
+            width:80px;
+            /*height:30px;*/
+            /*因为h4设置了行高30px，所以这里的高度可以不设置*/
+            background-color: #ff6700;
+            color: #fff;
+            font-size:14px;
+        }
+        h4{
+            line-height:30px;
+            padding-left:5px;
+        }
+        span{/*设置一个span目的是展现出下拉的小三角*/
+            display: inline-block;
+            border:5px solid;
+            border-color: #fff transparent transparent;
+            width:0;
+            height:0;
+            vertical-align: -4px;/*目的是为了让右侧的小三角在中间位置  -4px是调整出来的值*/
+        }
+        ul{
+            display: none;/*不经过的时候不显示*/
+            position: absolute;
+            left:-1px;
+            right:-1px;
+            top:31px;
+            list-style: none;
+            overflow: auto;/*下拉选项多的时候自适应出现滚动条*/
+            border:1px solid #cccccc;
+            height:100px;
+            background-color: #ff6700;
+            z-index:1;/*改变ul层级，使它覆盖在其他盒子上面*/
+        }
+        li{
+            margin-left:5px;
+            line-height:24px;
+        }
+        div:hover ul{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h4>默认值 <span></span></h4>
+    <ul>
+        <li>下拉项1</li>
+        <li>下拉项2</li>
+        <li>下拉项3</li>
+        <li>下拉项4</li>
+        <li>下拉项5</li>
+        <li>下拉项6</li>
+    </ul>
+</div>
+</body>
+</html>

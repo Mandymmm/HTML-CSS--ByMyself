@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复习 免费课</title>
+</head>
+<body>
+<script>
+    1.js是一门'解释型'语言，边解释边运行（预解释），运行在客户端（浏览器） 所以安全性低
+    2.js的组成：ECMAScript、BOM、DOM
+    3.js的命名规范
+    4.js的变量： var 变量；  function sum（n）{}  不仅var声明的是变量 函数名sum 和 形参 n 也是变量
+    5.js的数据类型：基本数据类型（number string boolean null undefined）
+                  引用数据类型[对象数据类型（对象类Object 数组类Array 正则类RegExp）  函数数据类型（function）]
+    6。数字数据类型number： 整数 小数 NaN
+        Number(val)
+        parseFloat('val')/parseInt('val')
+        isNaN(val) 传什么都可以
+
+        NaN==NaN  false
+    7.布尔数据类型
+    Boolean(val)==!!val
+    如何判断一个值的真假
+    !val  先将val转化为布尔 再取反
+    8.字符串 string 在js中字符串是保存字符的变量
+        charAt（index） 查找该索引位置的字符
+        字符串的截取：
+                    substr(n,m) 从索引n开始查找m个
+                    substring(n,m) 从索引n开始查找到索引m处 不包含m
+                    slice(n,m)  从索引n开始查找到索引m处 不包含m 支持负值
+        根据字符查找：
+                    str.indexOf('val')  第一次出现在字符串中的索引值
+                    str.lastIndexOf('val')  最后一次出现在字符串中的索引值
+                    str.search('val') 第一次出现在字符串中的索引值
+                    以上三种方法 如果字符串中找不到要找的字符 返回-1
+                    str.match('val')  返回一个数组['val']  如果没找到返回null
+        将字符串转化为数组： split()
+        替换字符串中的字符： str.replace(old,new)
+        转换大小写：
+                    str.toUpperCase() 转化为大写
+                    str.toLowerCase() 转化为小写
+    9.数组
+    ary.push()  向末尾添加一项或多项
+    ary.pop()  删除数组最后一项
+    ary.unshift()  向开始添加一项或多项
+    ary.shift()  删除数组第一项
+    都会改变原数组  返回值 删除的返回删除项  添加的返回数组长度
+
+
+    splice(n,m) 从索引n开始 删除m个 返回值为 删除项 原数组改变
+    splice(n)  从索引n开始 删除到末尾 返回值为 删除项 原数组改变
+    splice()   原数组不变 返回一个空数组
+    splice(0)  原数组为空 返回一个和原数组一样的数组
+    splice(n,m,x) 从索引n开始 删除m个 将x替换到删除为值 原数组改变 返回的是删除项
+    splice(0,0,x) 将x添加到数组开始位置
+    unshift() 将x添加到数组开始位置
+
+    splice(ary.length-1) 删除数组末尾项
+    splice(ary.length-1,1) 删除数组末尾项
+    ary.length-- 删除数组末尾项
+    pop()
+    splice(ary.length,0,x) 向数组末尾添加一项
+    ary[ary.length]=x  向数组末尾添加一项
+    push() 向数组末尾添加一项
+
+    slice(n,m) 从索引n开始截取到索引m 不包含m 原数组不改变
+
+    '题'：在不改变原数组的情况下，从第a项查找到第b项 ---> slice(a-1,b)
+
+
+    遍历：
+        ary.forEach()
+        ary.map()
+        ary.filter()
+    数组转化成字符串：
+                ary.toString()
+                ary.join()
+                ary.eval()
+    数组拼接： ary.concat()
+    排序：
+        ary.sort(function(a,b){
+            return a-b;/return b-a;
+        })
+        ary.reverse()  把数组项倒过来排列
+    查找：
+        indexOf()/lastIndexOf()
+    10.DOM
+    获取一组元素：集合 类数组
+        document.getElementsByName()  通过Name属性值
+        document.getElementsByTagName() 通过标签名
+        document.getElementsByClassName() 通过类名
+        document.querySelectorAll(css选择器)
+
+    获取一组中的一个：
+        document.getElementsByClassName()[2]  获取一组里的索引为2的那一项
+
+    获取一个元素：
+        document.getElementById() 通过id名
+        document.querySelector()
+
+    11.DOM节点
+        obj.childNodes()
+        obj.children()
+        obj.parentNode()
+        obj.previousSibling()
+        obj.previousElementSibling()
+        obj.nextSibling()
+        obj.firstChild()
+        obj.lastChild()
+
+    元素节点的 nodeType 1  nodeName 大写的标签名  nodeValue null
+
+    12.创建元素节点
+
+    var oo=document.createElement('oo');
+    oo.innerText='1234';
+    oo.style.backgroundColor='red';
+    document.body.appendChild(oo);
+    oo.parentNode.insertBefore(oo,old);
+    oo.cloneNode()
+    oo.parentNode.removeChild(oo)
+    oo.parentNode.replaceChild(oo,old)
+
+    oo.setAttribute('属性名','属性值')
+    oo.getAttribute('属性名')
+    oo.removeAttribute('属性名')
+
+
+
+    13.Math
+    Math.abs() 取绝对值
+    Math.ceil() 向上取整
+    Math.floor()  向下取整
+    Math.round() 四舍五入
+    Math.max()
+    Math.min()
+    Math.random() 取0-1之间的随机小数 不包含1
+    Math.round(Math.random()*(m-n)+n) 取n-m之间的随机整数
+
+    //0-9范围 取三个随机整数
+    /*var box='';
+     for (var i=0;i<3;i++){
+     var num=Math.round(Math.random()*9);
+     if (box.indexOf(num)===-1){
+     box+=num;
+     }else {
+     i--;
+     }
+
+     }
+     document.body.innerText=box;*/
+    /*var num1=Math.round(Math.random()*9);
+     var num2=Math.round(Math.random()*9);
+     var num3=Math.round(Math.random()*9);*/
+
+
+    //定时器：
+    window.setInterval(function(){
+        每一秒执行一次方法  持续执行
+    },1000);
+    window.setTimeout(function(){
+        过一秒后执行一次方法 只执行一次
+    },1000);
+
+    '题'：点击一个按钮  每隔一秒出现4个随机数字  十秒后  自行停止 0-9
+    //定制一个方法  取4个随机数  每隔一秒执行一次这个方法  执行十次后停止这个定时器即可
+
+    /*var oDiv=document.querySelector('div');
+    var oBtn=document.querySelector('button');
+    var time=null; //接收定时器的返回值
+    var con=0;
+    //写一个方法 取0-9随机整数
+    function Num() {
+        var num='';
+        for (var i=0;i<4;i++){
+            num+=Math.round(Math.random()*9);
+        };
+        oDiv.innerText=num;
+        con++; //这个方法每执行一次 con都会在之前的值上+1
+        if (con===5){
+            clearInterval(time); //当con=5时，将定时器清除
+        };
+    };
+    oBtn.onclick=function () {
+        time=window.setInterval(Num,1000);
+    };*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

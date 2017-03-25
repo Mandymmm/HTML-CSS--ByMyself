@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+       html{
+           font-size: 6.25%;
+       }
+        .box{
+            margin:0 auto;
+            width:10rem; /*160px 因为密度是2  所以可视窗口里显示的大小是80*80*/
+            height: 10rem; /*160px*/
+            background-color: orange;
+        }
+
+        /*拿到设计稿：640*1136（高度1136 是单屏的页面；只要大于1136 就不是单屏的页面 ，会出现滚动条 ，例如640*3491）（微信朋友圈中 h5 单屏展示 上滑下滑单屏切换的  一般是640*1136或者750*1334）
+             320*568  设备的分辨率（手机固定好的） ；密度为2*/
+    </style>
+</head>
+<body>
+
+<!--rem（font size of root element）
+r---root 根 html
+em---element
+
+浏览器默认 1rem=16px;
+则有1px=0.0625rem = 6.25%
+
+10px=0.625rem = 62.5%-->
+
+浏览器默认的字体大小是16px 即1rem=16px，但是后面width和height用rem为单位表示的时候，不方便快速计算，所以一般先将html（即浏览器根元素）默认的字体大小设为100px 即1rem=100px，则有1px=0.01rem
+<div class="box">
+
+</div>
+</body>
+</html>

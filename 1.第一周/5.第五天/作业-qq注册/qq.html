@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>qq注册</title>
+    <link rel="stylesheet" href="qqindex.css">
+</head>
+<body>
+<form>
+    <div class="top clearfix">
+        <p>注册账号</p>
+    </div>
+    <div class="bom">
+        <label for="fir">昵称</label>
+        <input type="text" id="fir" class="bom-input">
+        <span>请输入昵称</span>
+    </div>
+    <div class="bom">
+        <label for="sec">密码</label>
+        <input type="password" id="sec" class="bom-input">
+    </div>
+    <div class="bom">
+        <label for="third">确认密码</label>
+        <input type="password" id="third" class="bom-input">
+    </div>
+    <div class="bom clearfix">
+        <label>性别</label>
+        <div class="gender" id="div1">
+            <i id="i1"></i>
+
+        </div>
+        <span>男</span>
+        <div class="gender" id="div2">
+            <i id="i2"></i>
+
+        </div>
+        <span>女</span>
+    </div>
+</form>
+
+<script>
+    var oDiv1=document.getElementById("div1"),oI1=document.getElementById("i1");
+    oDiv1.onclick=function () {
+        oI1.style.display="block";
+    }
+</script>
+<script>
+    var oDiv2=document.getElementById("div2"),oI2=document.getElementById("i2");
+    oDiv2.onclick=function () {
+        oI2.style.display="block";
+    }
+</script>
+
+</body>
+</html>

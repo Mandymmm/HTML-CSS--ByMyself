@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for</title>
+</head>
+<body>
+<p class="item" id="thatItem"></p>
+
+<script>
+    //用类名获取的是一个数组，要控制每个元素 要用for循环
+    //用类名获取的是一个元素，可以直接控制这个元素
+    var item=document.getElementsByClassName('item');
+    var thatItem=document.getElementById('thatItem');
+    console.log(item);
+    console.log(thatItem);
+
+
+    var arr2=[
+        {name:'huge'},
+        {name:'zhangjike'},
+        {name:'luojin'}
+    ];
+
+    for (var i=0;i<3;i++){
+        var teachers=''; //每次循环都会创建一个空字符串
+        teachers+=arr2[i].name;
+        console.log(teachers);
+    }
+
+    var teachers='';
+    for (var i=0;i<3;i++){
+        teachers+=arr2[i].name;
+        console.log(teachers);
+    }
+</script>
+</body>
+</html>

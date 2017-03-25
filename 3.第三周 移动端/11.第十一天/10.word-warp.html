@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            margin:20px;
+            border:1px solid red;
+            width:100px;
+            height:300px;
+        }
+        /*中文本身就自动折行 英文不会自动折行 用了break word之后 英文会自动折行*/
+        .box3{
+            word-wrap: break-word;
+        }
+        .box4{
+            word-wrap: break-word;
+        }
+        .box6{
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+<div class="box box1">道具卡积分我饿安防监控冯绍峰哦为解放军第三款等级考试就发我付款束带结发</div><!--默认状态的中文-->
+<div class="box box2">fdjdskskmsafalfslfsdlkfskldfsldkflsdkfldsskfsmbnkfkdsfeklkdlfaek</div><!--默认状态的英文-->
+<div class="box box3">的发酵是客房及WWI欧风金风科技分手就分手打开房间副驾驶的空间佛那我就技术开发啥的非积分</div><!--设置以后的中文-->
+<div class="box box4">jkfjkfjsakfjeifjdkdfjiejfkjgisdfjkjeijfkfjslkja;iejfkgkasjfk</div><!--设置以后的英文-->
+<div class="box box5">房价放假爱打架额客服副书记飞洒发卡机分得快师skfllfdljfewojjfwfdjkfwijdskfjwdafjfk</div><!--默认状态的中英文混合-->
+<div class="box box6">房价放假爱打架额客服副书记飞洒发卡机分得快师skfllfdljfewojjfwfdjkfwijdskfjwdafjfk</div><!--设置该属性以后的中英文混合-->
+</body>
+</html>

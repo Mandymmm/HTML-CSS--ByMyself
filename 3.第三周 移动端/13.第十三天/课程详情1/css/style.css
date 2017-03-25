@@ -1,0 +1,141 @@
+html{
+    font-size: 100px;
+}
+body{
+    font-family: "Microsoft YaHei";
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight:normal;
+}
+header{
+    position: relative;
+    width:100%;
+    height:.55rem;
+    line-height: .55rem;
+    font-size: .15rem;
+    background: #2a2a2a;
+    color: #fff;
+    text-align: center;
+}
+header .arrow{
+    position: absolute;
+    top:.18rem;
+    left:.16rem;
+    width:.18rem;
+    height:.18rem;
+    background: url("../img/btn-icon.png") no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+.course-pic{
+    display: block;
+    width:100%;
+}
+.tab{
+    padding:0 .1rem;
+}
+.tab .tab-bar{
+    padding:.25rem 0 .14rem;
+}
+.tab .tab-bar ul{
+    width:40%;
+    height:.2rem;
+    margin:0 auto;
+    border:1px solid #3596e2;
+    border-radius: .05rem;
+    -webkit-border-radius: .05rem;
+    background-color: #fff;
+}
+.tab .tab-bar li{
+    float: left;
+    width:50%;
+    line-height: .2rem;
+    font-size: .12rem;
+    text-align: center;
+}
+.tab .tab-bar li.cur{
+    background: #3596e2;
+    color: #fff;
+}
+.tab-list h2{
+    line-height: .35rem;
+    font-size: .16rem;
+    color: #383838;
+}
+.tab-item-b,.tab-item-t{
+    border-top:1px solid #d7d7d7;
+}
+.tab-item-t p{
+    margin-bottom: .08rem;
+    font-size:0;
+}
+.tab-item-t p span{
+    display: inline-block;
+    margin-right:.08rem;
+    padding:.04rem;
+    line-height:.17rem ;
+    border-radius: .03rem;
+    font-size: .11rem;
+    color: #fff;
+    background-color: #3596e2;
+    text-align: center;
+}
+.tab-item-t p em{
+    font-style: normal;
+    font-size: .1rem;
+    color: #777;
+}
+.tab-item-t .price{
+    font-size: .12rem;
+    color: #ee4339;
+}
+.tab-item-b{
+    padding:.14rem .04rem ;
+}
+.tab-item-b .icon{
+    display: inline-block;
+}
+.tab-item-b .des .icon{
+    margin-right:.06rem;
+    width:.14rem;
+    height:.12rem;
+    background: url("../img/des-icon.png") no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+.tab-item-b .info .icon{
+    margin-right:.09rem;
+    width:.11rem;
+    height:.12rem;
+    background: url("../img/info-icon.png") no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+.tab-item-b h2{
+    line-height:.3rem;
+    font-size:.12rem ;
+    color: #383838;
+}
+.tab-item-b p{
+    line-height:.18rem;
+    font-size: .09rem;
+    color: #777;
+    margin-bottom: .05rem;
+}
+.submit{
+    display:block;
+    margin-top:.1rem;
+    width:100%;
+    height:.45rem;
+    line-height: .45rem;
+    font-size: .15rem;
+    background-color: #3596e2;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+
+
+

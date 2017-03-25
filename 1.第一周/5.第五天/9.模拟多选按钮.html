@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟多选按钮</title>
+    <style>
+        *{margin:0;padding:0;}
+        div{
+            position: relative;
+            margin:30px auto;
+            border:1px solid #757575;
+            border-radius: 3px;
+            width:30px;
+            height:30px;
+            background-color: lightgreen;
+        }
+        img{
+            display: none;/*没有点击时不显示*/
+            position: absolute;
+            left:50%;
+            top:50%;
+            margin-left:-10px;/*宽度的一半*/
+            margin-top:-10px;
+            /*将img移到div中间位置*/
+            width:20px;
+            height:20px;            
+        }
+        /*div:focus img{
+          display: block;
+      }*/
+        /*div不能用focus，所以要用到js来实现*/
+    </style>
+</head>
+<body>
+<div id="div">
+    <!--<i>√</i>-->
+    <!--也可以不用插入图片形式，用文字的对号也可以设置-->
+    <img src="btnr.png" alt="对号图片" id="btn">
+</div>
+<script>
+    var oDiv=document.getElementById("div"),oBtn=document.getElementById("btn");
+    oDiv.onclick=function () {
+        oBtn.style.display="block";
+    }
+</script>
+</body>
+</html>

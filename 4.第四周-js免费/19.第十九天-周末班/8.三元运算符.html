@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三元运算符</title>
+</head>
+<body>
+<script>
+    1?alert('厉害了我的歌'):alert('哈哈哈');// '厉害了我的歌'
+    0?alert('厉害了我的歌'):alert('哈哈哈');// '哈哈哈'
+    '0'?alert('厉害了我的歌'):alert('哈哈哈');// '厉害了我的歌'
+
+    function zkx() {
+        var num='咋开心';//函数里定义的是私有变量
+        num='穷开心';// 虽然没有var声明，但是变量名num与上面声明的相同，这条语句只是把上面定义的值'咋开心'覆盖了，变量num仍然是私有变量，所以在浏览器控制台直接输入num会报错，找不到这个私有变量
+    }
+    zkx();
+</script>
+</body>
+</html>

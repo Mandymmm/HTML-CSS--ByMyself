@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div>ul>li{border-width:5px;border-style:dashed;border-color: red;}
+        /*只有div下第一层级ul下第一层级li的样式*/
+        li{border-width:3px;border-style:solid;border-color: blue;}
+        /*当前文档下的所有li*/
+    </style>
+</head>
+
+<body>
+
+<p>
+    <!---->
+</p>
+<div>
+    <h1>wo1</h1>
+
+    <h2>wo2</h2>
+    <h3>wo3</h3>
+    <h4>wo4</h4>
+</div>
+    <div>
+        <ul>
+            <!--<li></li>-->
+        </ul>
+    </div>
+</div>
+    <div>
+        <ul>
+            <!--<li></li>-->
+            <li></li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

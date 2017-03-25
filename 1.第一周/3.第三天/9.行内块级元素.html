@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            margin-top:30px;
+            display: inline-block;
+            width:100px;
+            height:150px;
+            background: orange;
+            /*vertical-align: top;*/
+            /*向兄弟元素之间 最高的 那个元素 内容的顶部 对齐*/
+            /*vertical-align: bottom;*/
+            /*向兄弟元素之间 最高的 那个元素 内容的底部 对齐*/
+            vertical-align: middle;
+            /*中部*/
+        }
+        body span:nth-child(2){
+            font-size:30px;
+            height: 300px;}
+        /*利用后代选择器，选择body下面的第二个span，给他加样式*/
+    </style>
+</head>
+<body>
+<span></span>
+<span>胡歌胡歌胡歌胡歌胡歌</span>
+<span>X+x=胡歌</span>
+<span>买汤圆卖汤圆</span>
+<span>要带个数字吗6</span>
+</body>
+</html>

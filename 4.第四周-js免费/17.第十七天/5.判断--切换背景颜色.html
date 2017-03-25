@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>切换背景颜色</title>
+    <style>
+        html,body{
+            width:100%;
+            height:100%;
+        }
+
+    </style>
+</head>
+<body class="body" >
+<script>
+    //var oBody=document.querySelector('.body');
+    //声明一个叫做oBody的变量用来存储和代表在整个文档中通过选择器获取的元素
+    //document 文档
+    /*console.log(oBody);
+     console.dir(oBody);*/
+    //oBody.myselfName='自己咯';
+    //querySelector 通过选择器去查找  -- 获取DOM对象
+    //oBody.style.backgroundColor='red';
+    //向oBody行内添加css
+    //oBody.onclick=function () {
+    //   oBody.style.backgroundColor='green';
+    //};
+    //html和body是块级元素 宽度是父级内容的宽度，高度是本身内容的高度
+    //html和body没有高度的情况，onclick是不生效的
+
+
+    var oBody=document.querySelector('.body');
+    oBody.onclick=function () {
+        if(oBody.style.backgroundColor==='green'){
+            //如果获取到的背景颜色为绿色，点击之后变为粉色
+            oBody.style.backgroundColor='pink';
+        }else{
+            //如果获取到的背景颜色不是绿色，点击之后变为绿色
+            oBody.style.backgroundColor='green';
+        }
+    }
+</script>
+</body>
+</html>

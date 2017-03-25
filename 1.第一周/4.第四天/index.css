@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding:0;}
+ul{
+    list-style: none;
+}
+img{
+    border:none;
+    vertical-align: top;
+}
+body{
+    font:12px/1.5 "Microsoft YaHei";
+    /*font-size: 12px;
+    line-height: 1.5em;
+    font-style: "Microsoft YaHei";*/
+}
+.clearfix{*zoom:1;}
+.clearfix:after{/*清除浮动*/
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+.main{margin:0 auto;
+    width:1199px;
+    background-color: aquamarine;}
+ul{
+    margin-left:-65px;
+}
+li{
+    float: left;
+    margin-left:65px;
+    width:251px;
+    height: 184px;
+    background-color: white;
+}
+.top{
+    position: relative;
+    height:141px;
+    overflow: hidden;
+}
+.title{
+    position: absolute;
+    left:0;
+    right:0;
+    height:90px;
+    bottom:-37px;
+    background-image: url("bg.png");
+    padding:16px 15px 0;
+    cursor: pointer;
+    /*光标变小手*/
+    transition: bottom 0.3s;
+    /*过渡 --鼠标移入移出都有效果*/
+}
+.title:hover{
+    bottom:0;
+}
+h2{
+    font-size:14px;
+    font-width:none;
+    line-height:normal;
+    margin-bottom:14px;
+    color: #1e1e1e;
+}
+p{
+    margin-top:8px;
+    line-height:14px;
+    color: #9e9d9d;
+}
+.bom{
+    padding:0 13px 0 16px;
+    line-height:43px;
+
+}
+.right{
+    float: right;
+    color: #868484;
+}
+.left{
+    color: red;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            display:table;
+            background-color: orange ;
+            /*list-style: none;*/
+            /*转换成表格形式，就没有ul的自带列表样式了，所有不用list-style:none;即可*/
+            }
+        li{
+            display: table-cell;
+            background-color: green;
+
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>1 <br>1</li><!--即使第一行强制换行了，后面的2也会继续接着第一个1在一行显示-->
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+</body>
+</html>

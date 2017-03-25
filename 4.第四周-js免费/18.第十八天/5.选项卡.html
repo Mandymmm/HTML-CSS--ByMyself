@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            font:12px/1.5 "Microsoft YaHei";
+            background-color: #f5f5f5;
+        }
+        .clearfix:after{
+            display: block;
+            content: "";
+            clear: both;
+            height:0;
+            visibility: hidden;
+        }
+        .box{
+            overflow: hidden;
+            margin:20px auto;
+            border:1px solid #ebebeb;
+            border-radius: 3px;
+            width:300px;
+            background-color: #fff;
+        }
+        ul{
+            list-style: none;
+            width:302px;
+            background-color: #fcfcfc;
+
+        }
+        li{
+            float: left;
+            border-bottom: 1px solid #ebebeb;
+            width:74px;
+            line-height:41px;
+            color: #343434;
+            text-align: center;
+            cursor: pointer;
+        }
+        p{
+            display: none;
+            text-align: center;
+            line-height:41px;
+        }
+        li.cur{
+            margin-left:-1px;
+            padding-right:2px;
+            border-bottom-color:#fff;
+            border-left:1px solid #ebebeb;
+            border-right:1px solid #ebebeb;
+            width:150px;
+            background-color: #fff;
+        }
+        p.cur{
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+<div class="box">
+    <ul class="clearfix">
+        <li>小组更新</li>
+        <li class="cur">我的小组</li>
+        <li>热门话题</li>
+    </ul>
+    <p>小组更新</p>
+    <p class="cur">我的小组</p>
+    <p>热门话题</p>
+</div>
+
+<!--<script>
+    var oLis=document.querySelectorAll('li'),oP=document.querySelectorAll('p');
+    function tab(index) {
+        for (var i=0;i<oLis.length;i++){
+            oLis[i].className='';
+            oP[i].className='';
+        }
+        oLis[index].className='cur';
+        oP[index].className='cur';
+    }
+    for (var i=0;i<oLis.length;i++){
+        oLis[i].myIndex=i;
+        oLis[i].onclick=function () {
+            tab(this.myIndex);
+        }
+    }
+</script>-->
+
+
+<script>
+    var oLis=document.querySelectorAll('li'),oP=document.querySelectorAll('p');
+    for (var i=0;i<oLis.length;i++){
+        oLis[i].index=i;
+        oLis[i].onclick=function () {
+            for (var j=0;j<oLis.length;j++){
+                oLis[j].className='';
+                oP[j].className='';
+            };
+            this.className='cur';
+            oP[this.index].className='cur';
+        }
+    }
+</script>
+
+
+<!--<script>
+    //在点击一个对象的时候，让所有对象的类名都清除，然后再将这个类名添加给点击的对象和点击对象对应的盒子
+
+    方法一：
+    //获取要操作的元素
+    var oLis=document.querySelectorAll('li'),oP=document.querySelectorAll('P'); //oLis里有3个li oP里有3个P
+
+    //1 给每一个要点击的li绑定一个点击事件 利用for循环来实现控制每一个li
+    for(var i=0;i<oLis.length;i++){
+        oLis[i].index=i; // 把每一次循环的i的值赋值给每一个li的index属性 （新定义一个属性  i为属性值 以备后用）
+
+        oLis[i].onclick=function () {
+
+            for(var j=0;j<oLis.length;j++){
+                oLis[j].className='';
+                oP[j].className='';
+            }
+            //点击事件发生时，每一个p和li的类名先都变为空  再赋值一个新的类名cur
+            this.className='cur';
+            oP[this.index].className='cur';
+        }
+    }
+</script>-->
+
+
+<!--<script>
+
+    //方法二：
+    var oLis=document.querySelectorAll('li'),oP=document.querySelectorAll('p');
+
+    //先写一个方法 用函数来实现 1将所有li和p标签的类名去掉 2给li和p一个新的类名cur
+    function tab(index) {
+        for (var i=0;i<oLis.length;i++){
+                oLis[i].className='';
+                oP[i].className='';
+        };
+        oLis[index].className='cur';
+        oP[index].className='cur';
+    };
+
+    //用for循环来实现 点击每一个li 的时候 上面写的function都被调用
+    for (var i=0;i<oLis.length;i++){
+        oLis[i].myIndex=i;
+        oLis[i].onclick=function () {
+            tab(this.myIndex);
+        };
+    };
+</script>-->
+</body>
+</html>

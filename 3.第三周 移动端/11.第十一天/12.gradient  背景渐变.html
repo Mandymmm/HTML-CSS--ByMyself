@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+        .box1{
+            /*background: -webkit-gradient(linear,center,top,from(red),to(blue));传统书写样式*/
+            background: -webkit-linear-gradient(top,red,green);/*新的书写样式  top为起始点 颜色值可以写多个（只写两个的时候 第一个为起始颜色 第二个为终点颜色）*/
+            /*background: -webkit-linear-gradient(45deg,red,green); 45deg--45度 右下角为零度起始点  逆时针变化*/
+        }
+        .box2{
+            background:-webkit-linear-gradient(0deg,red,green);
+        }
+
+    </style>
+</head>
+<body>
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+<div class="box box4"></div>
+</body>
+</html>

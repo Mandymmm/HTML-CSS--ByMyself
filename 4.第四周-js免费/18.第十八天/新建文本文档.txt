@@ -1,0 +1,16 @@
+1.js的组成：EMCAScript、DOM、BOM
+2.js的数据类型：
+   基本数据类型：数字数据类型、字符串数据类型、布尔数据类型、null、undefined
+   引用数据类型：对象数据类型（数组类Array、对象类Object、正则类RegExp...） 、函数数据类型（function）
+3.js数据类型的检测方式：typeof  、instanceof 、construction 、 Object.prototype.toString.call()
+4.+=和=的区别： += 在原有值基础上累加 、 =赋值
+5.三元运算符的格式：(条件)?条件成立时执行的代码:条件不成立时执行的代码;
+6.for(var i=0;i<3;){ i
+}
+
+7.![]===false  ----true
+  parseInt('.3p12')==true  ---- false
+  !{}==0 ----true
+  null==0 ---- false
+  undefined==null ----true
+  false==null ---- false

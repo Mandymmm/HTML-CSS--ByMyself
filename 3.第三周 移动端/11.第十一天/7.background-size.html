@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            margin-top: 30px;
+            width:150px;
+            height:200px;
+            border:10px dotted orange;
+            text-align: center;
+            padding: 10px;
+            background: url("pic-left.jpg") no-repeat;
+        }
+        .box1{
+            background-size: contain;/*以图片最大边长为基础 另一个边长等比对应变化 会出现空白*/
+        }
+        .box2{
+            background-size: cover;/*以图片最小边长为基础 另一个边长等比对应变化 覆盖整个盒子*/
+        }
+    </style>
+</head>
+<body>
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+</body>
+</html>

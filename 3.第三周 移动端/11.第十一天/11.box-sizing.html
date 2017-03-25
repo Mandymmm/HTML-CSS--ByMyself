@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*box-sizing:border-box;这个属性会自动将设置了这个属性的盒子的边框和padding值算在宽度width里面，而不是width只包含内容的宽度 ，这样在总宽度一定的时候，后期给一个盒子加了边框或padding后并不会影响其它盒子的排布位置*/
+        /*默认状态为 content-box*/
+        /*border-box：padding和border被包含在定义的width和height之内。对象的实际宽度就等于设置的width值，即使定义有border和padding也不会改变对象的实际宽度，即 ( Element width = width )*/
+        .box{
+            width:500px;
+            height:200px;
+            background-color: orange;
+        }
+        .left{
+            float: left;
+            width:200px;
+            height:200px;
+            padding:20px;
+            border:5px solid #ccc;
+            background-color: palegreen;
+            box-sizing: border-box;/*border-box：padding和border被包含在定义的width和height之内*/
+            -webkit-box-sizing: border-box;/*谷歌内核*/
+        }
+        .right{
+            float: left;
+            width:300px;
+            height:200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+</body>
+</html>

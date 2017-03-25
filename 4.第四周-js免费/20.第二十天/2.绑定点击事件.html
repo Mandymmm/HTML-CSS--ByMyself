@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定点击事件</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #main{
+            width:600px;
+            height:300px;
+            margin:0 auto;
+            text-align: center;
+            background-color: #eee;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            display: inline-block;
+            border:1px solid #53b2ed;
+            width:190px;
+            height:50px;
+            line-height:50px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <ul class="box">
+        <li class="item">第一个</li>
+        <li class="item">第二个</li>
+        <li class="item">第三个</li>
+    </ul>
+</div>
+
+<script>
+    var oLis=document.getElementsByClassName('item');
+    for (var i=0;i<oLis.length;i++){
+        oLis[i].onclick = function () {
+            //alert('哈哈哈');
+            this.style.backgroundColor='orange';
+        };
+    };
+
+</script>
+</body>
+</html>

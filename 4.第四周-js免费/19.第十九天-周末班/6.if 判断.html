@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if 判断</title>
+</head>
+<body>
+<script>
+    var person={
+        name:'',
+    }
+
+
+
+
+    console.log(0||2||3||'');
+    console.log(1||2||3||''); //多层或者判断，当遇到true的时候返回当前值
+    console.log(2&&3||4);// 返回值为3  并且和或者重复使用的时候，先判断并且
+    console.log(2&&0||4);// 返回值为4  在进行并且判断的时候，&&前面的值判断为true之后并不会返回当前值，因为还要向后判断&&后面的值是否为true，若同时为true，则返回当前值（&&后面的值）
+    console.log(true&&0); //返回值为false
+    console.log(true&&1);// 返回值为1
+</script>
+</body>
+</html>

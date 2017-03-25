@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取4位不重复的验证码</title>
+</head>
+<body>
+<!--<script>
+    //有一个装着很多字符的盒子  验证码的取值范围
+    var str='abcdefg1234567890一二三四五六七八九十';
+    //从这个盒子中随机取出4个字符 获取4个不同的索引
+    var val=''; //每一次for循环得到的val值累加到这个变量中
+    for (var i=0;i<4;i++){
+        var eg=Math.round(Math.random()*(str.length-1));//((str.length-1)-0)+0 获取一个随机的索引值
+        var newVal=str.charAt(eg); // 获取该索引值对应的字符 将找到的字符添加到val这个变量中
+        if (val.indexOf(newVal)===-1){
+            val+=newVal;
+        }else {
+            i&#45;&#45;;//为了保证得到四个数
+        };
+    };
+    document.body.innerText=val;
+</script>-->
+
+<script>
+    var str='abcdefg1234567890一二三四五六七八九';// 验证码的取值范围
+    var val=''; // 定义一个变量 用来存放每一个验证码
+    for (var i=0;i<4;i++){
+        var ind=Math.round(Math.random()*(str.length-1)); //获取一个随机的索引值
+        val+=str.charAt(ind); // 获取该索引值所在位置的字符 并且添加到val这个变量里
+
+    }
+    document.body.innerText=val;
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>不同值的不同效果 switch case</title>
+</head>
+<body>
+<script>
+    var n=1;
+    switch (n){
+        case 0:
+            alert('0');
+            break;//跳出
+        case '1':
+            alert('1'); //switch (n)里面的n 与每一个case后的值进行的比较是绝对比较
+            break;
+        default:
+            alert('以上都不成立');
+    }
+</script>
+</body>
+</html>

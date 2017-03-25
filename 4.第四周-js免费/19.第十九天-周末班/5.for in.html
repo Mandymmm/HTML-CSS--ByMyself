@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for in</title>
+</head>
+<body>
+<script>
+    var people={
+        tag:'tiantiankaixin',
+        name:'huge',
+        age:'33'
+    }
+
+
+    for (var attr in people){
+        console.log(attr);//获取的是people这个变量里的每一个属性名
+    }
+
+    for (var attr in people){
+        console.log(people[attr]);//获取的是people这个变量里的每一个属性值
+    }
+
+    var str='';
+    for (var attr in people){
+        console.log(str+=people[attr]);//每一次循环输出 是之前字符串的依次累加
+    }
+</script>
+</body>
+</html>

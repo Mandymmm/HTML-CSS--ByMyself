@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取DOM中标签的方式 ByName</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li name="huge"></li>
+    <li name="lala"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li name="huge"></li>
+    <li name="huge"></li>
+</ul>
+
+<script>
+    var oLis=document.getElementsByName('huge');
+    console.dir(oLis);
+</script>
+</body>
+</html>

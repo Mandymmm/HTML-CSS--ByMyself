@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+</head>
+<body>
+<script>
+    function zhufeng(){
+        console.log('欢迎来到珠峰培训');
+    }   //定义函数
+    zhufeng(); //调用函数
+
+
+    function dojiangji(){
+        var zuoyong='豆浆';
+        console.log('生产'+zuoyong);
+    }
+    dojiangji();
+
+
+    function doujiangji (shui,dou,qiaokeli){ //函数定义时，定义的形式上(给实参传值定义的入口)的参数--- 形参 相当于定义一个变量var shui; ,但并没有赋值
+        var doujiang=shui+dou+qiaokeli;
+        console.log(doujiang+'的豆浆');
+    }
+    doujiangji('恒大冰泉','红豆黑豆','松露巧克力'); //函数调用时，给的是实参 相当于给形参定义的变量赋值 var shui='恒大冰泉';
+
+    //实参传的值的顺序与形参定义的顺序一一对应
+
+
+    function sum (num1,num2) {
+        var he=num1+num2;
+        console.log(he);
+    }
+    sum(5,6);
+
+
+
+    //写一个自我介绍的函数方法 ：名字 年龄 性别
+    function myself(myname,age,sex){
+        console.log(myname+age+sex);
+    }
+    myself('mhx','22','女');
+
+
+    function djj(water,b,color) {
+        console.log(water+b+color+'的豆浆');
+    }
+    djj('恒大冰泉','红豆','黑色');
+
+
+    //求和 两个数字的求和  求和结果赋值给thatResult
+    function summ (num1,num2) {
+        var thatsum=num1+num2;
+        return thatsum;
+        alert('huanyingdajia'); //没有弹出框
+        // 当浏览器解析代码的时候，在函数内部遇到return，函数return后面的代码都不执行
+    }
+    var thatResult=summ(6,6);
+    console.log(thatResult)
+    //在函数内部return什么变量 就输出什么变量值 （return什么就得到什么）
+
+    //如果说我们传的实参是字符串的情况下，我们对实参进行处理，然后返回乘积
+    function summa (num1,num2) {
+       if (typeof (num1)=='string'){
+           return num1*num2;
+       }
+        var thatsum=num1+num2;
+        return thatsum;
+    }
+    var thatResult=summa('5',6);
+    console.log(thatResult)
+
+
+    function summat (num1,num2) {
+        if (typeof (num1)=='number'){
+            return num1+''+num2;
+        }
+        return num1*num2;
+    }
+    var thatResult=summat(5,6);
+    console.log(thatResult)
+
+
+    
+    function summati(num1,num2) {
+        if(num1==5){
+            return num1+3;
+        }
+        return num2*2
+    }
+    var thatsummati=summati(3,8);
+    var thissummati=summati(5,8);
+    console.log(thatsummati);
+    console.log(thissummati);
+
+
+    //arguments 是一个类数组，代表的是我们传的具体的参数（实参）的集合
+    //每一个函数都有arguments属性
+    function summatio(num1,num2) {
+        console.log(arguments);
+    }
+    summatio(1,2,3,4,5,6);
+    //arguments里面的 callee 是函数本身
+    // length 是arguments的长度，不定义实参时 length为0
+
+
+    function summation(num1,num2) {
+        console.log(arguments[2]); //2为索引，索引从0开始，所以2对应的是实参中的第三个值
+    }
+    summation('huge',2,'hhhhh',4,5,6);
+
+
+
+    //匿名函数分为两种：自执行函数、函数表达式
+    //函数表达式: 我们写了一个匿名函数，给他赋值一个变量
+
+    //自执行函数：(function(){})(); 函数定义外面的小括号也可以换成在function前面加一个减号-/+加号/波浪号~/叹号！
+    (function (num1,num2) {
+        console.log(num1+num2);
+        console.log(arguments);
+    })(1,2,5);
+
+    //函数表达式：
+    var that = function (num1,num2) {
+        return num1;
+        alert('不执行');
+    }(1,2,5);
+
+
+    //函数表达式：
+    var method = function () {
+        console.log('123322');
+    }
+    method();
+
+
+
+</script>
+</body>
+</html>

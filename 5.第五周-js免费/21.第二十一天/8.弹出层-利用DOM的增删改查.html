@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出层</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        html,body{
+            height: 100%;
+        }
+        button{
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: 100px;
+            background-color: #2b7dd1;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+        #box{/*弹出层的样式*/
+            position: absolute;
+            top:0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.5);
+        }
+        #content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -200px;
+            width: 400px;
+            height: 200px;
+            background-color: #fff;
+        }
+        #span{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            background-color: #2b7dd1;
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<button>登录</button>
+<script>
+    var oDiv=document.createElement('div');
+    var oP=document.createElement('p');
+    var oSpan=document.createElement('span');
+    //定义三个变量 来创建div p span 标签
+    var oBtn=document.querySelector('button');
+    oDiv.id='box';
+    oP.id='content';
+    oSpan.id='span';
+    //给三个变量添加id属性
+    oP.appendChild(oSpan);
+    oDiv.appendChild(oP);
+    //把span放在p里，把p放在div里
+    oSpan.innerText='×';//给div添加个 x
+    oBtn.onclick=function () {
+        oBtn.parentNode.insertBefore(oDiv,oBtn); //点击button时，把oDiv放在button之前
+    };
+    oSpan.onclick=function () {
+        oDiv.parentNode.removeChild(oDiv); //点击span时，把oDiv移除
+    };
+</script>
+</body>
+</html>

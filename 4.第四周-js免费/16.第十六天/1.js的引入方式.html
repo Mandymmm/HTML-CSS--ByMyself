@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的引入方式</title>
+</head>
+<body>
+<input type="button" value="点击有惊喜" onclick="alert('逗你玩')"><!--行内式-->
+
+<script type="text/javascript">
+    document.documentElement.onclick=function () {
+        alert('点不到')
+    }
+</script><!--内嵌式-->
+
+<script src="link.js" type="text/javascript"></script><!--外链式-->
+</body>
+</html>

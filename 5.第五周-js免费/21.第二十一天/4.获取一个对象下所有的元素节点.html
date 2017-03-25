@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取一个对象下所有的元素节点</title>
+</head>
+<body>
+<div id="box">
+    <p>1p</p>
+    <ul>
+        <li>ul和li</li>
+    </ul>
+    <input type="text">
+</div>
+
+<script>
+    //获取所有的元素子节点：
+    //先获取所有的子节点
+    //再判断子节点是否为元素节点 nodeType值===1的时候 为元素节点
+    var obj={};
+    var oBox=document.getElementById('box');
+    var oBoxNodes=oBox.childNodes;//
+    for (var i=0;i<oBoxNodes.length;i++) {
+        if (oBoxNodes[i].nodeType===1){
+            obj[i]=oBoxNodes[i].nodeName;
+        };
+    };
+    console.log(obj);
+
+
+
+    //获取上一个元素节点
+    var oInput=document.getElementsByTagName('input');
+    var pre=oInput.previousElementSibling;
+    console.log(pre);
+
+</script>
+</body>
+</html>

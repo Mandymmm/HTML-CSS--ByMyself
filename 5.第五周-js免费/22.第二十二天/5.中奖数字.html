@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中奖数字</title>
+    <style>
+        #btn{
+            display: block;
+            margin:0 auto;
+            width:50px;
+            height:50px;
+        }
+        #box{
+            margin:0 auto;
+            width:200px;
+            height:50px;
+            border:1px solid orange;
+            border-radius:5px;
+            line-height:50px;
+            text-align: center;
+            letter-spacing: 10px;/*字间距*/
+        }
+    </style>
+</head>
+<body>
+<!--一个按钮
+    一个装数字的盒子  数字保持4个 0-9
+    点击按钮后 每过0.1秒数字更替 再次点击 结束展示最后四个数字
+    并弹出'恭喜你中奖了，请联系xxxxxxxx'-->
+
+<button id="btn">点击中奖</button>
+<div id="box">中奖区</div>
+
+<!--<script>
+    var oDiv=document.querySelector('#box');
+    var oBtn=document.querySelector('#btn');
+    //定义一个方法 随机在0-9范围内取出4个数字  将这4个数字放到box中
+    function getnum() {
+        //找一个盒子四次取到的数字
+        var str='';
+        //取四次0-9的随机整数
+        for (var i=0;i<4;i++){
+            str+=Math.round(Math.random()*9);
+        };
+        oDiv.innerText=str;
+    };
+    var temp=null; //null为false
+    oBtn.onclick=function () {
+//        如果temp里面没有值 则执行if代码块  有值 则执行else
+        if (!temp) { //  ！temp<==>!null 为 true
+            // clearInterval(temp);  执行定时器之前 先将之前的定时器停止 避免多次点击导致的定时器累加  此处因为已经判断temp为空才执行这一代码块 所以可以不清除
+            temp=window.setInterval(getnum,100);//判断temp为空 执行此定时器
+        }else {
+            clearInterval(temp); // temp中得到了一个定时器返回值，说明定时器已经被触发过了，我们直接将定时器清除
+            alert('恭喜你中奖了，请联系xxxxxxxx'); // 并弹出
+            temp=null; // 将temp里的值重新清空
+        };
+    };
+</script>-->
+
+<script>
+    var oDiv=document.querySelector('#box');
+    var oBtn=document.querySelector('#btn');
+    function getnum() {
+        var str='';
+        for (var i=0;i<4;i++){
+            str+=Math.round(Math.random()*9);
+        };
+        oDiv.innerText=str;
+    };
+    var temp=null;
+    oBtn.onclick=function () {
+        if(!temp){
+            temp=window.setInterval(getnum,100);
+        }else{
+            clearInterval(temp);
+            alert('恭喜你中奖了！');
+            temp=null;
+        };
+    };
+</script>
+</body>
+</html>

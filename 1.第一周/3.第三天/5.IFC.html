@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*为了说明行内元素，如果给了margin-top、margin-bottom、padding-top、padding-bottom的值，浏览器可以识别，但是不会起到撑开盒子本身及与其他盒子之间距离的作用*/
+        div{background-color: orange;
+            width:200px;
+            margin:10px;}
+        span{
+            margin:20px;
+            padding:10px;}
+    </style>
+</head>
+<body>
+<div>
+
+    <span>我是第1个span标签</span>
+    <span>我是第2个span标签</span>
+    <span>我是第3个span标签</span>
+    <span>我是第4个span标签</span>
+    <span>我是第5个span标签</span>
+</div>
+</body>
+</html>

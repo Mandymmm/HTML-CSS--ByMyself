@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入表单样式控制无任何差异</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        input{
+            margin:10px;
+            width:200px;
+            height:200px;
+            background-color: orange;
+            border:1px solid yellow;
+            /*outline:none;*/
+            outline:2px solid blue;
+            /*outline轮廓线  和border的样式控制方法相同  会展现在盒子border之外*/
+        }
+        input:focus{
+            outline:3px solid deeppink;
+        }/*鼠标点击input框的时候 轮廓线样式改变*/
+        textarea{
+            max-width:200px;
+            max-height: 200px;
+            min-width:100px;
+            width:200px;
+            height:200px;
+            border:1px solid blue;
+            background-color: pink;
+        }/*一般可以设置最大/最小 宽度和高度*/
+    </style>
+</head>
+<body>
+<input type="text">
+<input type="password">
+<textarea></textarea>
+</body>
+</html>

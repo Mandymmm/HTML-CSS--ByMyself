@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快速排序</title>
+</head>
+<body>
+<!--<script>
+    //快速排序、 冒泡排序、 数组去重
+
+//    1.快速排序
+
+//    1)思想：在数组中取出中间位置的那个数 作为基准点，然后把数组中剩下的项议程和这个基准点进行比较，比基准点小的放在左边的数组集合，比基准点大的放在右边的数组集合，左右两边集合按照以上思想分别进行排序，直到数组集合中只剩下一项或为空 排序结束，然后将所有数组按顺序拼接在一起
+//    2)步骤：
+    // 取出数组中中间位置的那个数：length/2  7/2=> Math.floor(length/2) =>num 3  arr[3] => arr.splice(3,1) =>[9] => [9][0] => 9
+    //  for循环 依次拿出数组每一项 和基准点进行比较  小的放左边left[]  大的放右边right[]
+
+
+    var ary=[2,13,4,9,5,6,23];
+    function quickSort(arry) {
+        if(arry.length<=1){  //如果数组长度不大于1 就不需要执行下面的操作 直接返回数组
+            return arry;
+        }
+
+        var midInd=Math.floor(length/2); //取数组中间一项的索引值  数组长度/2 再向下取整
+        var midNum=arry.splice(midInd,1)[0]; //通过中间项的索引值 取出数组中间一项 因为splice返回的是被删除项组成的新数组 所以要得到数值做基准值 要再加新数组索引值[0]取出具体数字 才能进行比较
+        var left=[]; //创建两个空数组 left[]用来存小于基准值的  right[] 用来存大于基准值的
+        var right=[];
+        for (var i=0;i<arry.length;i++){
+            var cur=arry[i]; //利用for循环来循环数组中的每一项  方便使用 将数组每一项赋值给一个变量cur
+            if (cur<midNum){  //如果数组项cur比基准值小 就添加到left[]这个数组中
+                left.push(cur);
+            }else { // 如果数组项cur比基准值大  就添加到right[]这个数组中
+                right.push(cur);
+            }
+        }
+        return quickSort(left).concat(midNum,quickSort(right)); // 利用函数递归来实现数组left[]和right[]分别进行上面比较  直到每一个数组长度都为1或0 再用concat()进行数组的拼接
+    }
+    console.log(quickSort(ary));//调用函数 并传递实参
+
+
+</script>-->
+
+<!--<script>
+    var ary=[2,5,3,12,10,8,9];
+    function quickSort(arry) {
+        if (arry.length<=1){
+            return arry;
+        }
+        var left=[];
+        var right=[];
+        var midInd=Math.floor(length/2);
+        var midNum=arry.splice(midInd,1)[0];
+        for (var i=0;i<arry.length;i++){
+            var cur=arry[i];
+            if (cur<midNum) {
+                left.push(cur);
+            }else {
+                right.push(cur);
+            };
+        };
+        return quickSort(left).concat(midNum,quickSort(right));
+    }
+    console.log(quickSort(ary));
+</script>-->
+
+<!--<script>
+    var ary=[2,3,1,15,12,10,8,6];
+    function quickSort(arry) {
+        if (arry.length<=1){
+            return arry;
+        }
+        var left=[];
+        var right=[];
+        var midInd=Math.floor(length/2);
+        var midNum=arry.splice(midInd,1)[0];
+        for (var i=0;i<arry.length;i++){
+            var cur=arry[i];
+            if (cur<midNum) {
+                left.push(cur);
+            }else {
+                right.push(cur);
+            };
+        };
+        return quickSort(left).concat(midNum,quickSort(right));
+    };
+    console.log(quickSort(ary));
+</script>-->
+
+<script>
+    var ary=[5,3,1,16,7,2,10];
+    function quickSort(arry) {
+        if (arry.length<=1){
+            return arry;
+        };
+        var left=[];
+        var right=[];
+        var midInd=Math.floor(length/2);
+        var midNum=arry.splice(midInd,1)[0];
+        for (var i=0;i<arry.length;i++){
+            var cur=arry[i];
+            if (cur<midNum) {
+                left.push(cur);
+            }else {
+                right.push(cur);
+            };
+        };
+        return quickSort(left).concat(midNum,quickSort(right));
+    };
+    console.log(quickSort(ary));
+</script>
+</body>
+</html>

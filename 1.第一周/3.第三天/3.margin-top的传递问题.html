@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;}
+        .box1{
+            background-color: blue;
+            width:300px;
+            height:300px;
+            /*border:1px solid;
+            padding: 1px;
+            第二种方法会改变父级盒子的整体大小，所以父级的width和height要相应变化
+            【通过给父级加border值来解决的时候，必须要有线型（style）这一属性值】*/
+            /*overflow: hidden;*/
+            /*margin:50px;*/
+            padding-top: 50px;
+        }
+        .box2{
+            background-color: orange;
+            width:300px;
+            height:300px;
+            /*margin:60px;*/}
+        p{
+            width:100px;
+            height:100px;
+            background-color: red;
+            /*margin-top:50px;
+            第三种方法把子级的margin-top值转变为父级的padding-top*/}
+    </style>
+</head>
+<body>
+<div class="box1">
+    <p></p>
+
+</div>
+
+<div class="box2">
+
+</div>
+<span></span>
+
+
+
+</body>
+</html>

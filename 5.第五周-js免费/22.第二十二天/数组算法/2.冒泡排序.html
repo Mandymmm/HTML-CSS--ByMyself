@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冒泡排序</title>
+</head>
+<body>
+<!--<script>
+//    冒泡排序思想：相邻两个数进行比较 如果当前项比后一项大就交换位置 否则不交换 从小到大
+//    规律： arr.length个  比较arr.length-1轮
+//          每一轮 比较次数 arr.length-1-上一轮轮数
+    var ary=[1,12,15,10,6,11,3];
+    function popSort(arry) { //定义一个方法（函数） 以便可以重复利用这一算法
+        for (var i=0;i<arry.length-1;i++){ // 控制轮数
+            var flag=true; //标记 用来判断是否需要排序（判断第一轮的时候内层for循环里面的if判断是否执行过 也就是每次相邻的两项进行比较时是否交换过位置）
+            for (var j=0;j<arry.length-1-i;j++){ // 控制次数
+                if (arry[j]>arry[j+1]){ //进行判断 如果第j项大于第j+1项  就交换位置
+                    var temp=arry[j]; // 另定义一个变量 来实现两项的交换
+                    arry[j]=arry[j+1];
+                    arry[j+1]=temp;
+                    flag=false; // 代表着交换过位置
+                }
+            }
+            if (flag){
+                return arry; // 如果比较一轮后发现flag仍然为true 则说明任意相邻两项都没有交换过位置 就没必要继续比较下一轮（也就是不需要排序） 直接返回
+            }
+        }
+        return arry;
+    }
+    console.log(popSort(ary));
+</script>-->
+
+
+<!--<script>
+    var ary=[2,1,3,5,35,23,18];
+    function popSort(arry) {
+        for (var i=0;i<ary.length-1;i++){
+            var flag=true;
+            for (var j=0;j<ary.length-1-i;j++){
+                if (ary[j]>ary[j+1]){
+                    var temp=ary[j];
+                    ary[j]=ary[j+1]
+                    ary[j+1]=temp;
+                    flag=false;
+                }
+            }
+            if (flag) {
+                return arry;
+            }
+        }
+        return arry;
+    }
+    console.log(popSort(ary));
+</script>-->
+
+<!--<script>
+    var ary=[1,3,2,13,10,9,0,1];
+    function popSort(arry) {
+        for (var i=0;i<arry.length-1;i++){
+            var flag=true;
+            for (var j=0;j<arry.length-1-i;j++){
+                if (arry[j]>arry[j+1]){
+                    var temp=arry[j];
+                    arry[j]=arry[j+1];
+                    arry[j+1]=temp;
+                    flag=false;
+                }
+            }
+            if (flag){
+                return arry;
+            }
+        }
+        return arry;
+    }
+    console.log(popSort(ary));
+
+
+</script>-->
+
+<script>
+    var ary=[233,15,6,3,8,12,1];
+    function popSort(arry) {
+        for (var i=0;i<arry.length-1;i++){
+            var flag=true;
+            for (var j=0;j<arry.length-1-i;j++){
+                if (arry[j]>arry[j+1]){
+                    var temp=arry[j];
+                    arry[j]=arry[j+1];
+                    arry[j+1]=temp;
+                    flag=false;
+                };
+            };
+            if (flag) {
+                return arry;
+            }
+        };
+        return arry;
+    };
+    console.log(popSort(ary));
+</script>
+</body>
+</html>

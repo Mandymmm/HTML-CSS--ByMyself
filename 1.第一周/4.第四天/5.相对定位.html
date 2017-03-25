@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    /*同时有两个矛盾的方向的时候，只有一个生效，上下  左右两个矛盾组合，默认上和左保留效果*/
+    <style>
+        .box1{
+            background: green;
+            width:300px;
+            height:200px;
+            padding-top: 50px;
+        }
+        .box2{
+            background: orange;
+            width:200px;
+            height:200px;
+            position: relative;
+            /*属性值relative是相对定位*/
+            top: -30px;
+            left: 200px;
+        }
+        p{
+            background: pink;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="box1">
+    <p>
+        胡歌
+    </p>
+</div>
+<div class="box2">
+
+</div>
+</body>
+</html>

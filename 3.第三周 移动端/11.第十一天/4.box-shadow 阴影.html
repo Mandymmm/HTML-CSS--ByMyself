@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width:300px;
+            height:100px;
+            border:3px solid red;
+            background: #ccc;
+            margin:10px;
+            color: #000;
+        }
+        .box1{
+            box-shadow: 4px 4px rgba(0,0,0,1);
+        }
+        .box2{
+            box-shadow: 4px 4px 10px rgba(0,0,0,1);/*第三个值 模糊度 不支持负值（负值的时候阴影则消失）*/
+        }
+        .box3{
+            box-shadow: 4px 4px 10px 5px rgba(0,0,0,1);/*第四个值 模糊半径 控制模糊度的范围*/
+        }
+        .box4{
+            box-shadow: 4px 4px rgba(0,0,0,1) inset;/*阴影向内部*/
+        }
+    </style>
+</head>
+<body>
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+<div class="box box4"></div>
+
+</body>
+</html>

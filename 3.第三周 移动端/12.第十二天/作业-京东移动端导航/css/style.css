@@ -1,0 +1,26 @@
+html{
+    font-size: 100px;
+}
+nav{
+    padding:0 .14rem .1rem .14rem;
+    width:auto;
+    background-color:#f3f3f3 ;
+}
+nav ul{
+    font-size: .07rem;
+}
+nav .list{
+    float: left;
+    margin-top:.16rem;
+    width:20%;
+    text-align: center;
+}
+nav .pic{
+    width:.29rem;
+    height: .29rem;
+}
+nav .title{
+    font-weight:normal;
+    font-size: .07rem;
+    text-align: center;
+}

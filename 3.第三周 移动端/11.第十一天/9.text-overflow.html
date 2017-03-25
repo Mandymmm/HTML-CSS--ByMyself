@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width:100px;
+            height: 30px;
+            line-height:30px;
+        }
+        .box1{
+            white-space: nowrap;/*强制文字不折行*/
+            overflow: hidden;
+            text-overflow: clip;/*自动裁剪文字 多余的部分被剪掉*/
+            /*text-overflow: ellipsis;多余部分变省略号...*/
+            /*text-overflow这个属性需要和 width（限制宽度）、overflow:hidden;（溢出隐藏）、white-space:nowrap;(强制不折行)一起使用 才起作用有效果*/
+        }
+
+    </style>
+</head>
+<body>
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+
+</body>
+</html>

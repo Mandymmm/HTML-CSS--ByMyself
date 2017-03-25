@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        .box{
+            width:100px;
+            height:100px;
+            border:1px solid orange;
+        }
+        .box li{
+            float: left;
+            width:20px;
+            height:20px;
+            margin:0 5px 5px 0;
+            line-height:20px;
+            text-align: center;
+            background-color: palegreen;
+        }
+        .box li:first-child{
+            background: pink;
+        }/*第一个*/
+        .box li:last-child{
+            background-color: blue;
+        }/*最后一个*/
+        .box li:nth-last-child(2){
+            background-color: yellow;
+        }/*倒数第几个*/
+        .box li:nth-child(even){
+            background-color: orchid;
+        }/*even  偶数行*/
+        .box li:nth-child(odd){
+            background-color: gold;
+        }/*odd  奇数行*/
+        .box li:nth-child(3n+1){
+            background-color: red;
+        }
+        /*nth-child()  括号里面可以放even 、odd 、含n式子（n从0开始，n不能为负） ，也可以直接放 数字*/
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+    </ul>
+</div>
+</body>
+</html>

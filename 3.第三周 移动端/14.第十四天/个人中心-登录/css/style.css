@@ -1,0 +1,146 @@
+@media screen and (min-width: 320px){
+    html{
+        font-size:50px;
+    }
+}
+@media screen and (min-width: 375px){
+    html{
+        font-size:58.59375px;
+    }
+}
+@media screen and (min-width: 414px){
+    html{
+        font-size:64.6875px;
+    }
+}
+header{
+    position: relative;
+    width:100%;
+    height:4.44rem;
+    background: url("../img/pic-bg.jpg") no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+header .main-person{
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin:-1.2rem 0 0 -0.6rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    width:1.2rem;
+    height:1.2rem;
+    background: url("../img/pic-person2.jpg") no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+header .name{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    margin:.3rem 0 0 -0.61rem;
+    width:1.22rem;
+    height:.4rem;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    background-color: #fff;
+    font-size: .24rem;
+    font-weight:bold;
+    color: #188ae4;
+    line-height: .4rem;
+    text-align: center;
+}
+.main{
+    padding:.2rem .43rem 0 .54rem;
+}
+.main li{
+    width:100%;
+    line-height:1.15rem;
+    border-bottom: 1px solid #eee;
+    font-size:.24rem;
+    font-weight:bold;
+    color: #383838;
+}
+.main .icon1,.main .icon2,.main .icon3{
+    display: inline-block;
+    vertical-align: middle;
+}
+.main .icon1{
+    margin-right:.35rem;
+    width:.39rem;
+    height:.39rem;
+    background: url("../img/person-icon1.png") no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+.main .icon2{
+    margin-right:.38rem;
+    width:.37rem;
+    height:.38rem;
+    background: url("../img/person-icon2.png") no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+.main .icon3{
+    margin-right:.41rem;
+    width:.33rem;
+    height:.38rem;
+    background: url("../img/person-icon3.png") no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+.main .btn{
+    float: right;
+    margin-top:.53rem;
+    width:.25rem;
+    height:.25rem;
+    background: url("../img/person-btn.png") no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+.footing{
+    margin-top:2.47rem;
+    padding-bottom: .04rem;
+    width:100%;
+    height:.91rem;
+    border-top:1px solid #d5d5d5;
+}
+.footing li{
+    float: left;
+    width:33%;
+    line-height: .95rem;
+    text-align: center;
+    font-size: .16rem;
+}
+.footing .tit{
+    line-height:.39rem;
+}
+.footing .person,.footing .course,.footing .home{
+    background: url("../img/icon.png") no-repeat ;
+    background-size: 3rem 2rem;
+    -webkit-background-size: 3rem 2rem;
+}
+.footing .person{
+    margin:.16rem auto 0;
+    width:.47rem;
+    height:.34rem;
+    background-position: 0 -0.68rem;
+}
+.footing .course{
+    margin:.11rem auto 0;
+    width:.41rem;
+    height:.41rem;
+    background-position: -1.77rem -0.68rem;
+}
+.footing .home{
+    margin:.18rem auto 0;
+    width:.39rem;
+    height:.35rem;
+    background-position:-0.85rem 0;
+}
+.footing .tit-home{
+    color: #51a7eb;
+}
+
+
+

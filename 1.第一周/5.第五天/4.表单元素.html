@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单元素</title>
+</head>
+<body>
+<!--#####type 的值 分别代表什么样的表单元素
+#####每个表单元素怎样控制样式，并且能控制哪些样式？
+#####什么样的表单元素需要模拟（用html其他元素和css来重新写一个类似表单的结构）-->
+<form action="url" method="GET"><!--表单元素里面什么元素都能放-->
+    <label for="uName">用户名：</label>
+    <input type="text" placeholder="请填写用户名" id="uName" value="值" name="名称">
+    <!--label  行内元素 对应表单元素的名称-->
+    <!--input  表单标签-->
+    <!--type="text"  text 此表单为文本框-->
+    <!--placeholder 提示信息  html5支持 即文档声明是html5-->
+    <!--for=“uName”和input里面的id=“uName”是为了让 用户名：文字和文本框联系起来-->
+    <!--name 属性用于对提交到服务器后的表单数据进行标识，或者在客户端通过 JavaScript 引用表单数据。-->
+    <br>
+    <label>密码：</label>
+    <input type="password" placeholder="请输入密码">
+    <!--value="123456"-->
+    <!--password  密码框  里面的内容是用点点点代替-->
+    <br>
+    <label>单选</label>
+    <!--要想让单选按钮之间有联系 要将单选按钮分为一组  当name值相同的时候 单选按钮即为一组-->
+    <input type="radio" name="yes" checked="checked"><label>有女朋友</label>
+    <input type="radio" name="yes"><label>有女朋友</label>
+<!--在input里加属性checked="checked"  在没有人为选择的时候，则会默认选择带有checked="checked"的选项-->
+    <label>多选</label>
+    <input type="checkbox" checked="checked"><label>车</label>
+    <input type="checkbox" checked><label>金钱</label>
+    <input type="checkbox" checked="true"><label>美女</label>
+    <input type="checkbox"><label>代码</label>
+<!--checked  选中状态
+    checked="checked"
+    checked
+    checked="true"
+    这三种写法意义相同-->
+    <br>
+    <label>下拉菜单</label>
+    <select>
+        <option value="下拉项1">下拉项1</option>
+        <option value="下拉项2">下拉项2</option>
+        <option value="下拉项3">下拉项3</option>
+        <option value="下拉项4">下拉项4</option>
+        <option value="下拉项5">下拉项5</option>
+    </select>
+    <br>
+    <input type="hidden"><!--此按钮页面看不到（用户不可见）或引入一些文件 这个按钮起到辅助作用-->
+    <input type="reset"><!--重置按钮-->
+    <input type="button" value="普通按钮"><!--普通按钮  要想里面有文字 加属性名value-->
+    <input type="file"><!--上传文件-->
+    <input type="image" src="url"><!--引入图片-->
+    <input type="submit"><!--提交按钮-->
+    <br>
+
+    <!--文本域   可以大量的输入内容  一般用于评论区-->
+    <textarea maxlength="10" minlength="2"></textarea>
+    <!--maxlength="10" 最大输入长度  input里面也可以加  定义为10则汉字、数字、英文都是最多可以输入10个 -->
+    <!--minlength="2" 最小输入长度-->
+</form>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+header{
+    position: relative;
+    width:100%;
+    height:1.1rem;
+    line-height:1.1rem;
+    text-align: center;
+    background-color: #252525;
+    color: #fff;
+}
+header .btn{
+    position: absolute;
+    top:.36rem;
+    left:.22rem;
+    width:.35rem;
+    height:.35rem;
+    background: url("../img/btn-icon.png") no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+header h1{
+    font-weight:normal;
+    font-size:.3rem;
+}
+.regBox{
+    padding:0 .35rem;
+}
+.regBox .pic{
+    margin: 1.13rem auto 1.07rem;
+    width:1.2rem;
+    height:1.2rem;
+}
+.regBox .pic img{
+    width:100%;
+    height:100%;
+}
+.iptBox{
+    padding:0 .32rem;
+    margin-bottom:.4rem;
+    border:1px solid #d0d0d0;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    height:.8rem;
+    line-height:.8rem;
+    font-size: .24rem;
+    color: #888;
+}
+.iptBox input{
+    border:0;
+}
+.iptBox span{
+    margin-right:.1rem;
+}
+.ver-code{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+.ver-code .iptBox{
+    width:55%;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.ver-code .send-btn{
+    display: inline-block;
+    border:1px solid #188ae4;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    width:43%;
+    height:.78rem;
+    line-height: .8rem;
+    text-align: center;
+    font-size: .24rem;
+    background-color: #d8edfe;
+    color: #188ae4;
+}
+.ver-code input{
+    width:30%;
+}
+.user-tip{
+    width:100%;
+    line-height:1rem;
+    font-size: .24rem;
+}
+.user-tip label{
+    cursor: pointer;
+}
+.user-tip a{
+    color: #188ae4;
+}
+
+.submit{
+    display: block;
+    margin:.13rem 0 2.56rem;
+    width:100%;
+    height:.8rem;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    line-height: .8rem;
+    text-align: center;
+    font-size: .3rem;
+    background-color: #188ae4;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:320px){
+    html{
+        font-size:50px;
+    }
+}
+@media screen and (min-width:375px){
+    html{
+        font-size:58.59375px
+    }
+}
+@media screen and (min-width:414px){
+    html{
+        font-size:64.6875px
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>十秒后的世界</title>
+    <style>
+        div{border: 2px solid #ff6700;width: 200px;height: 100px;font-size: 30px;line-height: 100px;text-align: center}
+    </style>
+</head>
+<body>
+<button>点击开始</button>
+<div>还没开始</div>
+<script>
+//    点击一个按钮  每隔一秒出现4个随机数字  十秒后  自行停止 0-9
+    //定制一个方法  取4个随机数  每隔一秒执行一次这个方法  执行十次后停止这个定时器即可
+
+    var oBtn=document.querySelector('button');
+    var oDiv=document.querySelector('div');
+    var temp=null;// 接收定时器的返回值
+    var cont=0;
+    function getNum() {
+        clearTimeout(temp);
+        var str='';
+        for (var i=0;i<4;i++){
+            str+=Math.round(Math.random()*9);
+        }
+        oDiv.innerText=str;
+        temp=window.setTimeout(getNum,1000); //利用递归和setTimeout模拟 setInterval的效果
+        cont++;
+        if (cont===3){
+            clearTimeout(temp);
+        }
+    }
+    var flag=false;
+    oBtn.onclick=function () {
+        if (!flag){
+            getNum();
+            flag=true
+        }
+        // temp=window.setTimeout(getNum,1000);
+    }
+
+
+</script>
+
+
+
+
+<!--<script>
+    var oBtn=document.querySelector('button');
+    var oDiv=document.querySelector('div');
+    var temp=null;// 接收定时器的返回值
+    var con=0;
+    // 写一个方法 取随机整数
+    function getName() {
+        var str='';// 取到的随机数都放在这个字符串中
+        for (var i=0;i<4;i++){
+            str+=Math.round(Math.random()*9);
+        }
+        oDiv.innerText=str;
+        con++;//每一次 getName执行的时候 con都会在之前的值上累加1 当con=3的时候 将定时器清除掉
+        if (con===3){
+            clearTimeout(temp);
+        }
+    }
+    oBtn.onclick=function () {
+        temp=window.setInterval(getName,1000);
+    }
+</script>-->
+
+<!--<script>
+     var oDiv=document.querySelector('div');
+     var oBtn=document.querySelector('button');
+     var time=null; //接收定时器的返回值
+     var con=0;
+     //写一个方法 取0-9随机整数
+
+     function Num() {
+     var num='';
+     for (var i=0;i<4;i++){
+     num+=Math.round(Math.random()*9);
+     };
+     oDiv.innerText=num;
+     con++; //这个方法每执行一次 con都会在之前的值上+1
+     if (con===5){
+     clearInterval(time); //当con=5时，将定时器清除
+     };
+     };
+     oBtn.onclick=function () {
+     time=window.setInterval(Num,1000);
+     };
+</script>-->
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击弹出当前函数</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-family:'Microsoft YaHei';
+        }
+        ul{
+            list-style: none;
+            margin:0 auto;
+            width:600px;
+            background-color:orange;
+        }
+        li{
+            padding-left:20px;
+            font-size:14px;
+            line-height:30px;
+            cursor: pointer;
+        }
+        .bg1{
+            background-color: palegreen;
+        }
+        .bg2{
+            background-color: linen;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>付款书法家偶尔发</li>
+    <li>放假了了解到快乐地福客隆商店</li>
+    <li>付款书法家偶尔发</li>
+    <li>方当事人锋利的福克斯范围了开发商</li>
+    <li>付款书法家偶尔发</li>
+    <li>范德萨发顺丰流口水了看懂了</li>
+    <li>付款书法家偶尔发</li>
+    <li>防守打法乐康膏金额索科洛夫</li>
+    <li>付款书法家偶尔发</li>
+    <li>冯绍峰空间可减肥该地块粉色的房</li>
+</ul>
+
+<script>
+    //点击每一个li的时候，弹出'我是第n行'
+    var oLis=document.querySelectorAll('li');
+    for(var i=0;i<oLis.length;i++){
+        //此时如果输出i 则输出的是for循环已经结束得到的i=10
+        oLis[i].index=i;
+
+        oLis[i].onclick=function () {
+            alert('我是第'+(this.index+1)+'行');
+        }
+    }
+
+</script>
+</body>
+</html>

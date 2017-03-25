@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            background: yellow;
+            line-height: 30px;
+            font-size:50px;
+            /*设置单行行高为30px,若每行里的文字大小设置的大于行高，则会发生文字在每行里溢出的现象；
+            要是设置成百分比是谁的百分比呢？？？*/
+        }
+    </style>
+</head>
+<body>
+<div>
+    文字文字 默认文字大小是16px， 在谷歌浏览器里 默认是宋体 实际占的高度是18px
+    字体为微软雅黑的时候，字体大小默认仍为16px  但所的占高度是21px
+    而在火狐浏览器里 16px 默认字体是微软雅黑  所占高度是22px
+</div>
+<!--如何将多余的文字变成...-->
+<!--首先要用一个 overflow：hidden；进行溢出隐藏，然后加text-overflow：ellipse；多余文本的展现形式变成省略，white-spacce：nowrap； 自动折行变成文本不换行-->
+<p style="height: 300px;width: 200px;background-color: blue;line-height: 30px;">文字文字 默认文字大小是16px， 在谷歌浏览器里 默认是宋体 实际占的高度是18px
+    字体为微软雅黑的时候，字体大小默认仍为16px  但所的占高度是21px
+    而在火狐浏览器里 16px 默认字体是微软雅黑  所占高度是22px</p>
+
+<!--多行文本溢出显示省略号的例子,对应的样式是.text{}-->
+<p>
+    文字文字 默认文字大小是16px， 在谷歌浏览器里 默认是宋体 实际占的高度是18px
+    字体为微软雅黑的时候，字体大小默认仍为16px  但所的占高度是21px
+    而在火狐浏览器里 16px 默认字体是微软雅黑  所占高度是22px
+</p>
+</body>
+</html>

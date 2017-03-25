@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>border制作三角形</title>
+    <style>
+        body{background-color: burlywood;}
+        div{
+            width:0px;
+            height:0px;
+            border:30px solid;
+            border-color: red transparent transparent;
+            /*background-color: pink;*/}
+        div:hover{
+            border-color: transparent transparent red;
+            /*margin-top:-30px;
+            为了让鼠标悬停的时候，显示的三角形位置不变，第一种方法给一个margin-top负值*/
+            position: relative;
+            top:-30px;
+            /*利用相对定位*/
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+</html>

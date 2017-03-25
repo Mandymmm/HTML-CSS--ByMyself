@@ -1,0 +1,94 @@
+header{
+    position: relative;
+    width:100%;
+    height:.55rem;
+    line-height: .55rem;
+    font-size: .15rem;
+    background: #2a2a2a;
+    color: #fff;
+    text-align: center;
+}
+header .btn{
+    position: absolute;
+    top:.18rem;
+    left:.16rem;
+    width:.18rem;
+    height:.18rem;
+    background: url("../img/btn-icon.png") no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+header h1{
+    font-weight:normal;
+}
+.loginBox{
+    padding:0 .35rem;
+}
+.loginBox .pic{
+    width:1.22rem;
+    height:1.2rem;
+    margin:.96rem auto 1.16rem;
+}
+.loginBox .pic img{
+    width:100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.login-form .ipt-box{
+    padding:0 .3rem;
+    line-height: .8rem;
+    border:1px solid #d0d0d0;
+    font-size: .24rem;
+    color: #777;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom:.41rem;
+}
+.login-form .ipt-box:nth-child(2){
+    margin-bottom: 0;
+}
+.login-form .ipt-box input{
+    border:0;
+}
+.loginform span{
+    display: inline-block;
+    width: .8rem;
+}
+.link-reg,.forget{
+    display: block;
+    line-height: 1rem;
+    font-size: .24rem;
+    color: #188ae4;
+}
+.sub{
+    display: block;
+    height:.8rem;
+    line-height:.8rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #188ae4;
+    color: #fff;
+    font-size: .3rem;
+    text-align: center;
+}
+.forget{
+    float: right;
+}
+
+
+
+@media screen and (min-width:320px){
+    html{
+        font-size:50px;
+    }
+}
+@media screen and (min-width:375px){
+    html{
+        font-size:58.59375px
+    }
+}
+@media screen and (min-width:414px){
+    html{
+        font-size:64.6875px
+    }
+}

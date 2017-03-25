@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>99乘法表</title>
+    <style>
+        span{
+            margin:0 20px;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    var str='';//先进行字符串拼接，然后将字符串统一放在这个变量中，最终直接将这个变量里面所有的内容输出到body中即可
+    for(var i=1;i<=9;i++){ // i --- 行 每一行用一组p标签，p标签里面放相应个数的span标签（当i=1的时候，p标签中需要1对span标签，i=2的时候，p标签中需要2对span标签...）
+        str+='<p>';
+        //当i=1 生成1对p标签  p标签包裹的循环里面 j=1<=1 所以里面的循环只执行一次 生成一对span标签 i++ i=2
+        //当i=2 生成1对p标签  p标签包裹的循环里面 j=1<=2 所以里面的循环执行两次（j=1和j=2 各执行一次） 生成两对span标签 i++ i=3
+
+        for(var j=1;j<=i;j++){ // j --- 列  每一个span标签里面进行变量i和 j与字符串的拼接
+            str+='<span>';
+            str+=j+'*'+i+'='+(j*i);
+            str+='</span>';
+        }
+        str+='</p>';
+    }
+    document.write(str);
+</script>
+</body>
+</html>

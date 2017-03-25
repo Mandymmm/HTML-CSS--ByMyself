@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch 切换背景颜色</title>
+    <style>
+        .btn{
+            display: block;
+            margin:0 auto;
+            width:200px;
+            height:50px;
+        }
+        div{
+            margin:0 auto;
+            width:200px;
+            height:300px;
+        }
+        .bg1{
+            background: linear-gradient(to bottom,orange,palegreen);
+        }
+        .bg2{
+            background: linear-gradient(to bottom,deeppink,grey);
+        }
+        .bg3{
+            background: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+<input type="button" class="btn" value="点击切换背景颜色">
+<div class="box bg1">
+
+</div>
+<script>
+    var oBtn=document.querySelector('.btn'),oBox=document.querySelector('.box');/*必须加引号*/
+
+    oBox.style.backgroundColor='red';/*向box 行内样式上 添加css*/
+
+    oBtn.onclick=function () {
+
+        /*switch (oBox.style.backgroundColor){
+            case 'red':
+                oBox.style.backgroundColor='green';
+                break;
+            case 'green':
+                oBox.style.backgroundColor='orange';
+                break;
+            case 'orange':
+                oBox.style.backgroundColor='blue';
+                break;
+            default:
+                oBox.style.backgroundColor='red';
+        }*/
+
+       /* if(oBox.style.backgroundColor==='red'){
+            oBox.style.backgroundColor='green';
+        }else if(oBox.style.backgroundColor==='green'){
+            oBox.style.backgroundColor='orange';
+        }else if(oBox.style.backgroundColor==='orange'){
+            oBox.style.backgroundColor='blue';
+        }else{
+            oBox.style.backgroundColor='red';
+        }*/
+
+
+
+       //通过控制获取的类名来控制css样式（非行内）
+        var oBtn=document.querySelector('.btn'),oBox=document.querySelector('div');
+        //oBox.className='bg2';
+        oBtn.onclick=function () {
+            if(oBox.className==='bg1'){
+                oBox.className='bg2';
+            }else if(oBox.className==='bg2'){
+                oBox.className='bg3';
+            }else{
+                oBox.className='bg1';
+            }
+        }
+
+    }
+</script>
+
+<!--js是操作DOM的，css样式不能直接操作-->
+</body>
+</html>

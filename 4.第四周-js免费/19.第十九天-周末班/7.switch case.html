@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch case</title>
+</head>
+<body>
+<script>
+    var age='19';
+    switch (age) {
+        case 21:
+            alert('太小了');
+            break;
+        case 19:
+            alert('相等的');// 因为case是绝对等于 ，数据类型要相同， '19'和19数据类型不同，不执行该条语句
+            break;
+        default:
+            alert('以上都不对');
+    }//返回值为：'以上都不对' ,
+</script>
+</body>
+</html>

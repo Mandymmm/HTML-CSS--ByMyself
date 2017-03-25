@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--meta:vp+tab 自动生成上面代码-->
+    <!--viewport  视口
+    initial-scale   默认的缩放比例
+    maximum-scale    最大缩放比例尺寸
+    minimum-scale    最小缩放比例
+    user-scalable=no   表示用户的缩放行为  是否可以缩放 两个值yes/no-->
+    <style>
+        .box{
+            width:50%;
+            height:300px;
+            margin:0 auto;
+            background-color: #2b7dd1;
+        }
+        /*min-width  视口的最小宽度 >=410*/
+        @media screen and (min-width: 410px){
+            .box{
+                background-color: orange;
+            }
+        }
+        /*宽度大于等于410的时候 变为橘色*/
+
+        /*max-width  视口的最大宽度 <=380*/
+        @media screen and (max-width: 380px){
+            .box{
+                background-color: pink;
+            }
+        }
+        /*宽度小于等于380的时候  变为粉色*/
+        @media s {
+            
+        }
+        /*最大宽度的值为A[<=A]，最小宽度的值为B[>=B]
+        [1]如果设置的两个值是A<B（假设A=380，即小于等于380时显示粉色；B=410，即大于等于410时显示橘色），则会把视口宽度分为三段：0-A（0-380粉色），A-B（380-410默认状态的蓝色），B-~（410-~橘色）,实际视口宽度处于不同阶段的时候，显示相应的颜色
+        [2]如果设置的两个值是A>B（假设A=410，即小于等于410时显示粉色；B=380即大于等于380时显示粉色），则会出现交集A-B，在这一阶段，谁写在后面显示谁的颜色效果；大于410的时候显示橘色，小于380的时候显示粉色。这种情况 默认状态的颜色不会起效果*/
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li>双方都快疯了打开方式法律思考</li>
+        <li>双方都快疯了打开方式法律思考</li>
+        <li>双方都快疯了打开方式法律思考</li>
+        <li>双方都快疯了打开方式法律思考</li>
+    </ul>
+</div>
+</body>
+</html>

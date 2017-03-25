@@ -1,0 +1,155 @@
+header,div,nav,article,section,ul,ol,li,body,h4,p{
+    margin:0;
+    padding:0;
+}
+ul,li{
+    list-style: none;
+}
+html{
+    font-size: 100px;
+}
+body{
+    background-color: #f8f8f8;
+}
+.clearfix:after{
+    display: block;
+    content: "";
+    clear: both;
+    height:0;
+    font-size: 0;
+    visibility: hidden;
+}
+a{
+    text-decoration: none;
+    background-color: transparent;
+}
+header{
+    width:auto;
+    height:.45rem;
+    padding:.11rem 0 0 .08rem;
+    background-color: #2a2a2a;
+}
+header .logo{
+    float: left;
+    width:1.05rem;
+    height:.31rem;
+    background: url("../img/logo.png") no-repeat;
+    background-size:cover;
+    -webkit-background-size: cover;
+}
+header .list-icon{
+    float: right;
+    width:.18rem;
+    height: .16rem;
+    margin:.08rem .11rem 0 0;
+    background: url("../img/menu.png") no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+.focus{
+    position: relative;
+    width:100%;
+    font-size:0;/*解决ul前的回车导致的ul与img不在一行显示*/
+}
+.focus img{
+    width:100%;
+
+}
+.focus .dot{
+    position: absolute;
+    bottom: .08rem;
+    left:50%;
+    margin-left: -0.38rem;
+}
+.focus .dot li{
+    float: left;
+    margin-right:.04rem;
+    width:.08rem;
+    height:.08rem;
+    border-radius: 50%;
+    -webkit-border-radius:50%;
+    background-color: #fff;
+}
+.title{
+    font-size: .13rem;
+    color: #4c4b4b;
+}
+.title .book-icon{
+    float: left;
+    margin:0 .06rem 0 .1rem;
+    width:.15rem;
+    height:.18rem;
+    background: url("../img/book.png") no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+.main{
+    margin:0 .1rem .18rem .1rem;
+    background-color: #fff;
+    font-size: 0;
+    border-radius: .03rem;
+    box-shadow: .03rem .03rem .08rem rgba(0,0,0,.35);
+}
+.main img{
+    width:100%;
+    height:1.4rem;
+    border-radius: .03rem .03rem 0 0;
+}
+.main .info{
+    width:100%;
+    padding:.09rem 0;
+}
+.main h4,.main p{
+    line-height: .27rem;
+    font-size: .14rem;
+    text-align: center;
+}
+.main h4 a{
+    color: #777;
+}
+.main p{
+    color: #ed3a3a;
+}
+.m-foot{
+    padding: .08rem 0 0 .06rem;
+    border-top:1px solid #d5d5d5;
+    height:.39rem;
+}
+.m-foot li{
+    float: left;
+    width:33.33%;
+    font-size:.08rem;
+    color:#ababab;
+    text-align: center;
+}
+.m-foot .cur{
+    color: #2388db;
+}
+.m-foot li em{
+    display: block;
+    margin:0 auto;
+    width:.25rem;
+    height:.2rem;
+    background: url("../img/icon.png") no-repeat;
+    background-size: 1.5rem 1rem;
+}
+.m-foot li span{
+    display: inline-block;
+    padding-top:.02rem;
+}
+.m-foot .home{
+    background-position:0 0;
+}
+.m-foot .course{
+    background-position:-0.88rem -0.34rem;
+}
+.m-foot .person{
+    background-position:-0.43rem -0.34rem;
+}
+
+
+
+
+
+
+

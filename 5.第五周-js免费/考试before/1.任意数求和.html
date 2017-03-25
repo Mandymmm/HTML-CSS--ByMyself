@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任意数求和</title>
+    <!--任意数： 传递什么值 传递多少都可以-->
+    <!--求和 --- 结果是数字数据类型-->
+    <!--方法 ---- 什么时候用都可以求一些不确定值的和-->
+</head>
+<body>
+
+<!--<script>
+    function sum() { //定义函数
+        var total=null; //定义一个变量total 整体的和 为空 占位
+        for(i=0;i<arguments.length;i++){ //利用for循环实现每项实参的累加
+            var val=Number(arguments[i]); //arguments[i]&#45;&#45;实参集合里的第i项 、 将每一项转化为数字，Number()转化结果为有效数字或NaN
+            if(!isNaN(val)){ //判断转化之后的值val 是不是有效数字 是有效数字则执行if函数体里的total+=val; ,不是有效数字则开始新一轮for循环
+                total+=val;
+            }
+        }
+        return total; //将得到的最终结果返回到函数外，这个结果函数执行的时候接收
+    }
+    console.log(sum(1,'2',true,{},[5],233)); //传递任意实参 输出
+    
+    
+    
+    
+    
+</script>-->
+
+<script>
+    function sum() {
+        var total=null;
+        for (var i=0;i<arguments.length;i++){
+            var num=Number(arguments[i]);
+            if (!isNaN(num)){
+                total+=num;
+            };
+        };
+        return total;
+    };
+    console.log(sum(100,200,'a',300));
+</script>
+</body>
+</html>

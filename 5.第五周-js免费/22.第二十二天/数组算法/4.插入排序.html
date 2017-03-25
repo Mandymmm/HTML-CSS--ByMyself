@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插入排序</title>
+</head>
+<body>
+
+<!--<script>
+    var ary=[2,1,3,5,2,7,9];
+    var newAry=[]; //创建一个新的数组
+    newAry.push(ary[0]); //将数组ary中的第一项添加到newAry [2]
+    for (var i=1;i<ary.length;i++){ //因为数字ary中索引为0那一项已经放在了新数组中 所以从数组ary中索引为1的一项开始 把ary里的每一项分别和newAry中的每一项都进行比较
+        for (var j=0;j<newAry.length;){ //利用for循环来实现分别和newAry中的每一项比较
+            if (ary[i]<newAry[j]){ //如果ary中的索引i那一项<newAry中的当前项 就执行if代码块
+                newAry.splice(j,0,ary[i]);//将ary的当前索引为i这一项 放在新数组索引为j这一项的前面
+                break; // 跳出里面的这个for循环，继续执行i++
+            }else { // 如果ary中的索引i那一项不小于newAry中的当前项 就执行else代码块
+                j++; // j++ 让ary[i]这一项和新数组的下一项进行比较
+                if (j===newAry.length){ //因为j是从0开始，如果本轮j++后的j等于新数组的长度 就说明ary[i]这一项已经和新数组的每一项都比较过了 并且比新数组中的每一项都大 就把ary[i]这一项添加到新数组的末尾 成为最后一项
+                    newAry.push(ary[i]);
+                    break; // 跳出里面的这个for循环，继续执行i++
+                }
+            }
+        }
+    }
+    console.log(newAry);
+</script>-->
+
+<!--<script>
+    var ary=[1,8,3,9,5,2,0,-5];
+    var newAry=[];
+    newAry.push(ary[0]);
+    for (var i=1;i<ary.length;i++){
+        for (var j=0;j<newAry.length;){
+            if (ary[i]<newAry[j]){
+                newAry.splice(j,0,ary[i]);
+                break;
+            }else {
+                j++;
+                if (j===newAry.length){
+                    newAry.push(ary[i]);
+                    break;
+                }
+            }
+        }
+    }
+    console.log(newAry);
+</script>-->
+
+<!--<script>
+    var ary=[23,15,3,8,11,18,9];
+    var newAry=[];
+    newAry.push(ary[0]);
+    for (var i=1;i<ary.length;i++){
+        for (var j=0;j<newAry.length;){
+            if (ary[i]<newAry[j]){
+                newAry.splice(j,0,ary[i]);
+                break;
+            }else {
+                j++;
+                if (j===newAry.length){
+                    newAry.push(ary[i]);
+                    break;
+                };
+            };
+        };
+    };
+    console.log(newAry);
+</script>-->
+
+<script>
+    var ary=[23,18,5,6,12,2,16];
+    var newAry=[];
+    newAry.push(ary[0]);
+    for (var i=1;i<ary.length;i++){
+        for (var j=0;j<newAry.length;){
+            if (ary[i]<newAry[j]){
+                newAry.splice(j,0,ary[i]);
+                break;
+            }else {
+                j++;
+                if (j===newAry.length){
+                    newAry.push(ary[i]);
+                    break;
+                };
+            };
+        };
+    };
+    console.log(newAry);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数作业</title>
+    <!--写一个任意数求和，/原理  arguments  for 循环-->
+     <!--写一个方法 1.匿名函数 2.实名函数
+    介绍自己  姓名 年龄 性别 qq 哪年毕业-->
+</head>
+<body>
+<script>
+    //自我介绍-实名函数
+    function myself (name,age,sex,qq,time) {
+        var mine=name+age+sex+qq+time;
+        return mine;
+    }
+    var thatResult=myself('mhx','22','女','1343348751','2017年');
+    console.log(thatResult);
+    
+    //自我介绍-匿名函数
+    var thisResult=function (name,age,sex,qq,time) {
+        console.log(name+age+sex+qq+time);
+    }('mhx',22,'女','1343348751','2017年');
+
+
+    //任意数求和  原理:arguments  for 循环
+    function sum () {
+        var result=null;
+        for(var i=0;i<=arguments.length;i++){
+            var num=Number(arguments[i]);
+            if (!isNaN(num)){
+                result=result+num;
+            }
+        }
+        return result;
+    }
+    var totalResult=sum(10,20,30,'50','huge');
+    console.log(totalResult);
+
+</script>
+
+</body>
+</html>
